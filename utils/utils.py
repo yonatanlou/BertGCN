@@ -2,7 +2,7 @@ import numpy as np
 import pickle as pkl
 import networkx as nx
 import scipy.sparse as sp
-from scipy.sparse.linalg.eigen.arpack import eigsh
+from scipy.sparse.linalg import eigsh
 import sys
 import re
 
@@ -19,7 +19,7 @@ def sample_mask(idx, l):
     """Create mask."""
     mask = np.zeros(l)
     mask[idx] = 1
-    return np.array(mask, dtype=np.bool)
+    return np.array(mask, dtype=np.bool_)
 
 
 def load_data(dataset_str):
@@ -145,7 +145,8 @@ def load_corpus(dataset_str):
                 objects.append(pkl.load(f))
 
     x, y, tx, ty, allx, ally, adj = tuple(objects)
-    print(x.shape, y.shape, tx.shape, ty.shape, allx.shape, ally.shape)
+
+    print(f"{x.shape=}, {y.shape=}, {tx.shape=}, {ty.shape=}, {allx.shape=}, {ally.shape=}")
 
     features = sp.vstack((allx, tx)).tolil()
     labels = np.vstack((ally, ty))
