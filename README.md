@@ -2,7 +2,7 @@
 This repo contains code for [BertGCN: Transductive Text Classification by Combining GCN and BERT](https://arxiv.org/abs/2105.05727).
 This was forked from [BertGCN](https://github.com/ZeroRin/BertGCN)
 
-
+For installing DGL, my recommendation is to take a look in their website.
 ## Dependencies
 
 Create environment and install required packages for BertGCN using conda:
