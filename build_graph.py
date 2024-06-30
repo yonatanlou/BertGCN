@@ -2,31 +2,27 @@ import os
 import random
 import numpy as np
 import pickle as pkl
-import networkx as nx
+# import networkx as nx
 import scipy.sparse as sp
 from utils import loadWord2Vec, clean_str
 from math import log
-from sklearn import svm
-from nltk.corpus import wordnet as wn
-from sklearn.feature_extraction.text import TfidfVectorizer
+# from sklearn import svm
+# from nltk.corpus import wordnet as wn
+# from sklearn.feature_extraction.text import TfidfVectorizer
 import sys
 from scipy.spatial.distance import cosine
+from datetime import datetime
+
 
 if len(sys.argv) != 2:
 	sys.exit("Use: python build_graph.py <dataset>")
 
-datasets = ['20ng', 'R8', 'R52', 'ohsumed', 'mr']
+datasets = ['20ng', 'R8', 'R52', 'ohsumed', 'mr', 'DSS_composition_classification']
 # build corpus
 dataset = sys.argv[1]
 
 if dataset not in datasets:
 	sys.exit("wrong dataset name")
-
-# Read Word Vectors
-# word_vector_file = 'data/glove.6B/glove.6B.300d.txt'
-# word_vector_file = 'data/corpus/' + dataset + '_word_vectors.txt'
-#_, embd, word_vector_map = loadWord2Vec(word_vector_file)
-# word_embeddings_dim = len(embd[0])
 
 word_embeddings_dim = 300
 word_vector_map = {}
@@ -36,7 +32,7 @@ doc_name_list = []
 doc_train_list = []
 doc_test_list = []
 
-f = open('data/' + dataset + '.txt', 'r')
+f = open('data/' + dataset + '_labels.txt', 'r')
 lines = f.readlines()
 for line in lines:
     doc_name_list.append(line.strip())
@@ -50,7 +46,7 @@ f.close()
 # print(doc_test_list)
 
 doc_content_list = []
-f = open('data/corpus/' + dataset + '.clean.txt', 'r')
+f = open('data/corpus/' + dataset + '_text.txt', 'r')
 lines = f.readlines()
 for line in lines:
     doc_content_list.append(line.strip())
@@ -61,7 +57,6 @@ train_ids = []
 for train_name in doc_train_list:
     train_id = doc_name_list.index(train_name)
     train_ids.append(train_id)
-print(train_ids)
 random.shuffle(train_ids)
 
 # partial labeled data
@@ -76,7 +71,6 @@ test_ids = []
 for test_name in doc_test_list:
     test_id = doc_name_list.index(test_name)
     test_ids.append(test_id)
-print(test_ids)
 random.shuffle(test_ids)
 
 test_ids_str = '\n'.join(str(index) for index in test_ids)
@@ -85,8 +79,8 @@ f.write(test_ids_str)
 f.close()
 
 ids = train_ids + test_ids
-print(ids)
-print(len(ids))
+
+print(f"{datetime.now()} - train_ids + test_ids {len(ids)=}")
 
 shuffle_doc_name_list = []
 shuffle_doc_words_list = []
@@ -105,6 +99,7 @@ f.write(shuffle_doc_words_str)
 f.close()
 
 # build vocab
+print(f"{datetime.now()} - building vocab")
 word_freq = {}
 word_set = set()
 for doc_words in shuffle_doc_words_list:
@@ -118,7 +113,7 @@ for doc_words in shuffle_doc_words_list:
 
 vocab = list(word_set)
 vocab_size = len(vocab)
-
+print(f"{datetime.now()} - {vocab_size}")
 word_doc_list = {}
 
 for i in range(len(shuffle_doc_words_list)):
@@ -324,7 +319,7 @@ for i in range(len(vocab)):
 row_allx = []
 col_allx = []
 data_allx = []
-
+print(f"{datetime.now()} - building embeddings")
 for i in range(train_size):
     doc_vec = np.array([0.0 for k in range(word_embeddings_dim)])
     doc_words = shuffle_doc_words_list[i]
@@ -370,7 +365,8 @@ for i in range(vocab_size):
 
 ally = np.array(ally)
 
-print(x.shape, y.shape, tx.shape, ty.shape, allx.shape, ally.shape)
+print()
+print(f"{datetime.now()} - {x.shape=}, {y.shape=}, {tx.shape=}, {ty.shape=}, {allx.shape=}, {ally.shape=}")
 
 '''
 Doc word heterogeneous graph
@@ -379,7 +375,7 @@ Doc word heterogeneous graph
 # word co-occurence with context windows
 window_size = 20
 windows = []
-
+print(f"{datetime.now()} - building windows with {window_size=}")
 for doc_words in shuffle_doc_words_list:
     words = doc_words.split()
     length = len(words)
@@ -392,7 +388,7 @@ for doc_words in shuffle_doc_words_list:
             windows.append(window)
             # print(window)
 
-
+print(f"{datetime.now()} - {len(windows)=}")
 word_window_freq = {}
 for window in windows:
     appeared = set()
@@ -434,7 +430,7 @@ weight = []
 # pmi as weights
 
 num_window = len(windows)
-
+print(f"{datetime.now()} - building PMI's")
 for key in word_pair_count:
     temp = key.split(',')
     i = int(temp[0])
@@ -500,6 +496,7 @@ for i in range(len(shuffle_doc_words_list)):
         doc_word_set.add(word)
 
 node_size = train_size + vocab_size + test_size
+print(f"{datetime.now()} - building adj matrix with {node_size} nodes ({train_size=} + {vocab_size=} + {test_size=})")
 adj = sp.csr_matrix(
     (weight, (row, col)), shape=(node_size, node_size))
 
