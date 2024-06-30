@@ -1,0 +1,812 @@
+CD:1:1-1:12	train	CD
+CD:1:12-2:1	test	CD
+CD:2:1-2:10	train	CD
+CD:2:10-2:20	train	CD
+CD:2:20-3:8	train	CD
+CD:3:8-3:18	test	CD
+CD:3:18-4:7	test	CD
+CD:4:7-4:18	train	CD
+CD:4:18-5:6	train	CD
+CD:5:6-5:15	train	CD
+CD:5:15-6:4	train	CD
+CD:6:4-6:15	train	CD
+CD:6:15-7:4	test	CD
+CD:7:5-7:14	train	CD
+CD:7:14-8:3	test	CD
+CD:8:3-8:13	train	CD
+CD:8:13-9:1	train	CD
+CD:9:1-9:10	train	CD
+CD:9:10-9:19	train	CD
+CD:9:19-10:6	train	CD
+CD:10:6-10:16	train	CD
+CD:10:16-11:2	test	CD
+CD:11:3-11:11	test	CD
+CD:11:11-11:20	train	CD
+CD:11:20-12:6	train	CD
+CD:12:6-12:15	train	CD
+CD:12:15-13:2	train	CD
+CD:13:2-13:11	test	CD
+CD:13:11-13:20	test	CD
+CD:13:21-14:7	train	CD
+CD:14:7-14:16	train	CD
+CD:14:16-15:2	test	CD
+CD:15:2-15:11	train	CD
+CD:15:11-16:2	train	CD
+CD:16:2-16:11	test	CD
+CD:16:11-16:20	test	CD
+CD:16:20-19:10	train	CD
+CD:19:10-19:19	train	CD
+CD:19:20-19:29	test	CD
+CD:19:29-20:3	train	CD
+CD:20:3-20:12	train	CD
+CD:20:12-20:21	train	CD
+CD:20:21-20:30	train	CD
+CD:20:30-20:34	train	CD
+1QS:1:1-1:11	train	community_rule
+1QS:1:11-1:21	train	community_rule
+1QS:1:21-2:5	test	community_rule
+1QS:2:5-2:14	train	community_rule
+1QS:2:14-2:23	test	community_rule
+1QS:2:23-3:5	train	community_rule
+1QS:3:5-3:13	train	community_rule
+1QS:3:13-3:22	train	community_rule
+1QS:3:22-4:3	train	community_rule
+1QS:4:3-4:10	test	community_rule
+1QS:4:10-4:17	train	community_rule
+1QS:4:17-4:22	train	community_rule
+1QS:4:22-5:1	train	community_rule
+1QS:5:1-5:7	train	community_rule
+1QS:5:7-5:13	train	community_rule
+1QS:5:13-5:18	train	community_rule
+1QS:5:18-5:24	test	community_rule
+1QS:5:24-6:4	train	community_rule
+1QS:6:4-6:10	test	community_rule
+1QS:6:10-6:15	train	community_rule
+1QS:6:15-6:20	test	community_rule
+1QS:6:20-6:27	train	community_rule
+1QS:6:27-7:6	test	community_rule
+1QS:7:6-7:13	train	community_rule
+1QS:7:13-7:19	train	community_rule
+1QS:7:20-8:2	train	community_rule
+1QS:8:2-8:10	train	community_rule
+1QS:8:10-8:18	test	community_rule
+1QS:8:18-8:26	train	community_rule
+1QS:8:26-9:7	train	community_rule
+1QS:9:7-9:14	test	community_rule
+1QS:9:14-9:21	train	community_rule
+1QS:9:21-10:2	train	community_rule
+1QS:10:2-10:9	test	community_rule
+1QS:10:9-10:15	train	community_rule
+1QS:10:15-10:21	train	community_rule
+1QS:10:21-11:2	train	community_rule
+1QS:11:2-11:8	train	community_rule
+1QS:11:8-11:15	test	community_rule
+1QS:11:15-11:22	test	community_rule
+1QS:11:22-11:22	train	community_rule
+1QSa:1:1-1:9	train	the_rule_of_the_congregation
+1QSa:1:10-1:18	train	the_rule_of_the_congregation
+1QSa:1:18-1:26	test	the_rule_of_the_congregation
+1QSa:1:26-2:7	train	the_rule_of_the_congregation
+1QSa:2:7-2:16	train	the_rule_of_the_congregation
+1QSa:2:16-2:22	test	the_rule_of_the_congregation
+1QSb:1:1-1:28	test	the_rule_of_the_blessings
+1QSb:1:28-3:4	train	the_rule_of_the_blessings
+1QSb:3:4-3:23	test	the_rule_of_the_blessings
+1QSb:3:23-4:21	train	the_rule_of_the_blessings
+1QSb:4:21-5:3	train	the_rule_of_the_blessings
+1QSb:5:4-5:23	train	the_rule_of_the_blessings
+1QSb:5:23-f14:1	train	the_rule_of_the_blessings
+1QSb:f14:1-f29:4	train	the_rule_of_the_blessings
+1QpHab:1:1-1:12	test	Pesharim
+1QpHab:1:12-2:9	train	Pesharim
+1QpHab:2:9-3:6	test	Pesharim
+1QpHab:3:6-4:4	train	Pesharim
+1QpHab:4:4-5:2	test	Pesharim
+1QpHab:5:2-5:14	train	Pesharim
+1QpHab:5:14-6:12	train	Pesharim
+1QpHab:6:12-7:9	train	Pesharim
+1QpHab:7:9-8:5	train	Pesharim
+1QpHab:8:5-8:17	train	Pesharim
+1QpHab:8:17-9:14	train	Pesharim
+1QpHab:9:14-10:11	test	Pesharim
+1QpHab:10:11-11:10	train	Pesharim
+1QpHab:11:10-12:7	train	Pesharim
+1QpHab:12:7-13:2	train	Pesharim
+1QpHab:13:2-13:4	test	Pesharim
+1QM:1:1-1:6	train	War Scroll
+1QM:1:6-1:11	train	War Scroll
+1QM:1:11-1:20	train	War Scroll
+1QM:1:20-2:6	train	War Scroll
+1QM:2:6-2:11	train	War Scroll
+1QM:2:11-3:1	train	War Scroll
+1QM:3:1-3:7	train	War Scroll
+1QM:3:7-3:14	train	War Scroll
+1QM:3:14-4:3	test	War Scroll
+1QM:4:3-4:9	train	War Scroll
+1QM:4:9-4:13	train	War Scroll
+1QM:4:13-5:3	train	War Scroll
+1QM:5:3-5:9	test	War Scroll
+1QM:5:9-5:16	train	War Scroll
+1QM:5:17-6:5	train	War Scroll
+1QM:6:5-6:12	train	War Scroll
+1QM:6:12-7:1	test	War Scroll
+1QM:7:1-7:6	train	War Scroll
+1QM:7:6-7:13	train	War Scroll
+1QM:7:13-8:2	test	War Scroll
+1QM:8:3-8:11	train	War Scroll
+1QM:8:11-9:3	train	War Scroll
+1QM:9:3-9:11	train	War Scroll
+1QM:9:11-10:1	train	War Scroll
+1QM:10:1-10:8	train	War Scroll
+1QM:10:8-10:15	train	War Scroll
+1QM:10:16-11:5	test	War Scroll
+1QM:11:5-11:13	test	War Scroll
+1QM:11:13-12:3	test	War Scroll
+1QM:12:3-12:11	train	War Scroll
+1QM:12:11-13:1	train	War Scroll
+1QM:13:1-13:9	train	War Scroll
+1QM:13:9-13:15	test	War Scroll
+1QM:13:15-14:5	train	War Scroll
+1QM:14:6-14:11	train	War Scroll
+1QM:14:11-14:19	test	War Scroll
+1QM:14:20-15:8	test	War Scroll
+1QM:15:8-15:16	train	War Scroll
+1QM:15:17-16:7	train	War Scroll
+1QM:16:7-16:15	train	War Scroll
+1QM:16:15-17:5	test	War Scroll
+1QM:17:5-17:12	train	War Scroll
+1QM:17:12-18:3	train	War Scroll
+1QM:18:3-18:11	train	War Scroll
+1QM:18:11-19:3	test	War Scroll
+1QM:19:3-19:10	test	War Scroll
+1QM:19:10-f7:1	test	War Scroll
+1QHa:2:12-3:25	test	Hodayot
+1QHa:3:26-4:17	train	Hodayot
+1QHa:4:18-4:27	test	Hodayot
+1QHa:4:27-4:35	train	Hodayot
+1QHa:4:35-5:15	train	Hodayot
+1QHa:5:15-5:24	train	Hodayot
+1QHa:5:24-5:31	test	Hodayot
+1QHa:5:31-5:40	train	Hodayot
+1QHa:5:40-6:21	train	Hodayot
+1QHa:6:21-6:29	train	Hodayot
+1QHa:6:29-6:38	test	Hodayot
+1QHa:6:38-7:17	train	Hodayot
+1QHa:7:17-7:26	train	Hodayot
+1QHa:7:26-7:33	train	Hodayot
+1QHa:7:33-7:40	train	Hodayot
+1QHa:7:40-8:18	test	Hodayot
+1QHa:8:18-8:26	train	Hodayot
+1QHa:8:26-8:32	train	Hodayot
+1QHa:8:32-9:5	test	Hodayot
+1QHa:9:5-9:14	test	Hodayot
+1QHa:9:14-9:23	train	Hodayot
+1QHa:9:23-9:30	train	Hodayot
+1QHa:9:30-9:39	test	Hodayot
+1QHa:9:39-10:10	train	Hodayot
+1QHa:10:11-10:19	train	Hodayot
+1QHa:10:19-10:28	train	Hodayot
+1QHa:10:28-10:37	train	Hodayot
+1QHa:10:37-11:8	train	Hodayot
+1QHa:11:8-11:16	train	Hodayot
+1QHa:11:16-11:23	train	Hodayot
+1QHa:11:23-11:30	test	Hodayot
+1QHa:11:30-11:38	train	Hodayot
+1QHa:11:38-12:8	test	Hodayot
+1QHa:12:8-12:15	train	Hodayot
+1QHa:12:15-12:23	train	Hodayot
+1QHa:12:23-12:30	test	Hodayot
+1QHa:12:30-12:36	train	Hodayot
+1QHa:12:36-13:8	train	Hodayot
+1QHa:13:8-13:15	test	Hodayot
+1QHa:13:15-13:23	test	Hodayot
+1QHa:13:23-13:30	train	Hodayot
+1QHa:13:30-13:37	test	Hodayot
+1QHa:13:37-14:9	train	Hodayot
+1QHa:14:9-14:16	train	Hodayot
+1QHa:14:16-14:23	train	Hodayot
+1QHa:14:23-14:30	train	Hodayot
+1QHa:14:30-14:36	train	Hodayot
+1QHa:14:36-15:8	train	Hodayot
+1QHa:15:8-15:16	train	Hodayot
+1QHa:15:16-15:25	test	Hodayot
+1QHa:15:25-15:34	train	Hodayot
+1QHa:15:34-16:2	test	Hodayot
+1QHa:16:2-16:10	train	Hodayot
+1QHa:16:10-16:18	train	Hodayot
+1QHa:16:18-16:25	train	Hodayot
+1QHa:16:25-16:33	train	Hodayot
+1QHa:16:33-17:1	test	Hodayot
+1QHa:17:1-17:11	train	Hodayot
+1QHa:17:11-17:20	test	Hodayot
+1QHa:17:20-17:28	train	Hodayot
+1QHa:17:28-17:38	train	Hodayot
+1QHa:17:38-18:9	train	Hodayot
+1QHa:18:9-18:18	train	Hodayot
+1QHa:18:18-18:28	train	Hodayot
+1QHa:18:28-18:36	train	Hodayot
+1QHa:18:37-19:10	train	Hodayot
+1QHa:19:10-19:20	test	Hodayot
+1QHa:19:20-19:28	train	Hodayot
+1QHa:19:28-19:38	train	Hodayot
+1QHa:19:38-20:11	test	Hodayot
+1QHa:20:11-20:22	test	Hodayot
+1QHa:20:22-20:32	train	Hodayot
+1QHa:20:32-20:41	test	Hodayot
+1QHa:20:42-21:12	train	Hodayot
+1QHa:21:12-21:23	train	Hodayot
+1QHa:21:23-21:33	train	Hodayot
+1QHa:21:33-22:13	train	Hodayot
+1QHa:22:13-22:27	train	Hodayot
+1QHa:22:27-22:38	train	Hodayot
+1QHa:22:38-23:14	test	Hodayot
+1QHa:23:14-23:27	train	Hodayot
+1QHa:23:27-24:7	train	Hodayot
+1QHa:24:8-24:25	test	Hodayot
+1QHa:24:25-25:5	train	Hodayot
+1QHa:25:5-25:16	train	Hodayot
+1QHa:25:16-26:2	test	Hodayot
+1QHa:26:2-26:12	train	Hodayot
+1QHa:26:12-26:24	train	Hodayot
+1QHa:26:24-26:32	train	Hodayot
+1QHa:26:32-27:14	test	Hodayot
+1QHa:28:11-fA8:2	train	Hodayot
+1QHa:fA8:2-fC5:3	test	Hodayot
+1QHa:fC5:4-fC8:4	test	Hodayot
+4Q161:f1:1-f2_4:9	train	Pesharim
+4Q161:f2_4:9-f5_6:11	train	Pesharim
+4Q161:f5_6:11-f8_10:10	train	Pesharim
+4Q161:f8_10:11-f8_10:21	train	Pesharim
+4Q161:f8_10:21-f8_10:24	train	Pesharim
+4Q163:f1:1-f4_7i:7	test	Pesharim
+4Q163:f4_7i:8-f4_7ii:5	train	Pesharim
+4Q163:f4_7ii:5-f4_7ii:21	train	Pesharim
+4Q163:f8_10:1-f11i:1	test	Pesharim
+4Q163:f11i:1-f12:11	train	Pesharim
+4Q163:f13:1-f15_16:4	train	Pesharim
+4Q163:f15_16:4-f21:1	train	Pesharim
+4Q163:f21:1-f21:15	test	Pesharim
+4Q163:f21:15-f23ii:8	train	Pesharim
+4Q163:f23ii:8-f23ii:20	train	Pesharim
+4Q163:f23ii:20-f27:2	test	Pesharim
+4Q163:f27:2-f34:3	train	Pesharim
+4Q163:f34:3-f44:4	test	Pesharim
+4Q163:f45:1-f57:1	train	Pesharim
+4Q163:f57:1-f57:1	train	Pesharim
+4Q169:f1_2:1-f1_2:11	train	Pesharim
+4Q169:f1_2:11-f3_4i:9	train	Pesharim
+4Q169:f3_4i:9-f3_4ii:5	test	Pesharim
+4Q169:f3_4ii:5-f3_4ii:12	test	Pesharim
+4Q169:f3_4ii:12-f3_4iii:9	train	Pesharim
+4Q169:f3_4iii:9-f3_4iv:5	train	Pesharim
+4Q169:f3_4iv:5-f5:3	train	Pesharim
+4Q171:f1_2i:1-f1_2ii:4	train	Pesharim
+4Q171:f1_2ii:4-f1_2ii:14	test	Pesharim
+4Q171:f1_2ii:14-f1_2ii:26	train	Pesharim
+4Q171:f1_2ii:26-f1+3_4iii:10	test	Pesharim
+4Q171:f1+3_4iii:10-f3_10iv:1	test	Pesharim
+4Q171:f3_10iv:1-f3_10iv:11	train	Pesharim
+4Q171:f3_10iv:11-f3_10iv:19	train	Pesharim
+4Q171:f3_10iv:19-f13:4	train	Pesharim
+4Q171:f13:4-f13:6	test	Pesharim
+4Q174:f1_2i:1-f1_2i:7	train	Catena_Florilegium
+4Q174:f1_2i:7-f1_2i:15	train	Catena_Florilegium
+4Q174:f1_2i:15-f1_3ii:3	train	Catena_Florilegium
+4Q174:f1_3ii:3-f6_7:3	test	Catena_Florilegium
+4Q174:f6_7:3-f9_10:3	train	Catena_Florilegium
+4Q174:f9_10:3-f17:1	train	Catena_Florilegium
+4Q174:f17:1-f26:2	test	Catena_Florilegium
+4Q177:f1_4:1-f1_4:10	train	Catena_Florilegium
+4Q177:f1_4:10-f1_4:15	train	Catena_Florilegium
+4Q177:f1_4:16-f5_6:8	test	Catena_Florilegium
+4Q177:f5_6:8-f7:6	train	Catena_Florilegium
+4Q177:f7:6-f10_11:2	test	Catena_Florilegium
+4Q177:f10_11:2-f12_13i:2	train	Catena_Florilegium
+4Q177:f12_13i:2-f12_13i:11	train	Catena_Florilegium
+4Q177:f12_13i:11-f17:2	train	Catena_Florilegium
+4Q177:f17:2-f23:3	train	Catena_Florilegium
+4Q177:f23:3-f30:3	test	Catena_Florilegium
+4Q216:1:3-1:11	train	Book_of_Jubilees
+4Q216:1:11-2:3	train	Book_of_Jubilees
+4Q216:2:3-2:12	train	Book_of_Jubilees
+4Q216:2:12-4:7	train	Book_of_Jubilees
+4Q216:4:8-5:7	test	Book_of_Jubilees
+4Q216:5:7-6:4	train	Book_of_Jubilees
+4Q216:6:4-6:12	test	Book_of_Jubilees
+4Q216:6:12-7:4	test	Book_of_Jubilees
+4Q216:7:4-7:12	test	Book_of_Jubilees
+4Q216:7:12-7:17	train	Book_of_Jubilees
+4Q219:1:10-1:36	train	Book_of_Jubilees
+4Q219:1:36-2:17	test	Book_of_Jubilees
+4Q219:2:18-2:27	train	Book_of_Jubilees
+4Q219:2:27-2:37	train	Book_of_Jubilees
+4Q219:2:37-2:37	train	Book_of_Jubilees
+4Q221:f1:1-f2i:3	train	Book_of_Jubilees
+4Q221:f2i:3-f4:2	test	Book_of_Jubilees
+4Q221:f4:2-f5:2	train	Book_of_Jubilees
+4Q221:f5:2-f6:4	train	Book_of_Jubilees
+4Q221:f6:4-f7:9	train	Book_of_Jubilees
+4Q221:f7:9-f16:1	train	Book_of_Jubilees
+4Q221:f16:1-f19:3	train	Book_of_Jubilees
+4Q223_224:f1i:1-f2i:47	train	Book_of_Jubilees
+4Q223_224:f2i:47-f2i:52	train	Book_of_Jubilees
+4Q223_224:f2i:53-f2ii:5	train	Book_of_Jubilees
+4Q223_224:f2ii:5-f2ii:11	train	Book_of_Jubilees
+4Q223_224:f2ii:11-f2ii:19	train	Book_of_Jubilees
+4Q223_224:f2ii:19-f2ii:50	test	Book_of_Jubilees
+4Q223_224:f2ii:50-f2iii:4	train	Book_of_Jubilees
+4Q223_224:f2iii:4-f2iii:10	train	Book_of_Jubilees
+4Q223_224:f2iii:10-f2iii:18	train	Book_of_Jubilees
+4Q223_224:f2iii:18-f2iv:8	train	Book_of_Jubilees
+4Q223_224:f2iv:8-f2iv:15	test	Book_of_Jubilees
+4Q223_224:f2iv:15-f2iv:22	test	Book_of_Jubilees
+4Q223_224:f2iv:22-f2iv:29	test	Book_of_Jubilees
+4Q223_224:f2iv:30-f2v:5	train	Book_of_Jubilees
+4Q223_224:f2v:5-f2v:13	train	Book_of_Jubilees
+4Q223_224:f2v:13-f2v:21	train	Book_of_Jubilees
+4Q223_224:f2v:21-f2v:28	test	Book_of_Jubilees
+4Q223_224:f2v:28-f44:2	train	Book_of_Jubilees
+4Q223_224:f44:2-f55:2	train	Book_of_Jubilees
+4Q223_224:f55:2-f69:2	train	Book_of_Jubilees
+4Q256:1:9-2:12	train	4QS
+4Q256:2:12-9:2	test	4QS
+4Q256:9:3-9:10	train	4QS
+4Q256:9:10-11:13	test	4QS
+4Q256:11:13-19:2	train	4QS
+4Q256:19:2-20:5	train	4QS
+4Q256:20:5-23:3	train	4QS
+4Q257:f1aV:1-2:7	train	4QS
+4Q257:2:7-3:9	train	4QS
+4Q257:3:9-5:4	test	4QS
+4Q257:5:5-6:3	train	4QS
+4Q257:6:3-fA:3	test	4QS
+4Q258:1:1-1:7	train	4QS
+4Q258:1:8-2:2	train	4QS
+4Q258:2:2-2:8	train	4QS
+4Q258:2:8-3:4	train	4QS
+4Q258:5:1-6:7	train	4QS
+4Q258:6:7-7:3	test	4QS
+4Q258:7:3-8:1	train	4QS
+4Q258:8:1-8:7	train	4QS
+4Q258:8:7-9:1	train	4QS
+4Q258:9:2-9:12	test	4QS
+4Q258:9:12-13:2	train	4QS
+4Q258:13:2-13:3	train	4QS
+4Q259:1:4-1:13	train	4QS
+4Q259:1:14-2:10	test	4QS
+4Q259:2:10-3:1	train	4QS
+4Q259:3:1-3:11	train	4QS
+4Q259:3:11-4:3	test	4QS
+4Q259:4:3-4:6	test	4QS
+4Q286:f1i:7-f1ii:12	test	Berakhot
+4Q286:f1ii:12-f4:4	train	Berakhot
+4Q286:f4:4-f5a_c:13	train	Berakhot
+4Q286:f5a_c:13-f7ii:4	train	Berakhot
+4Q286:f7ii:4-f7ii:12	train	Berakhot
+4Q286:f7ii:12-f17a:2	train	Berakhot
+4Q286:f17b:1-f14:3	test	Berakhot
+4Q286:f14:3-f14:4	train	Berakhot
+4Q299:f1:1-f3aii_b:1	train	Mysteries
+4Q299:f3aii_b:1-f3aii_b:14	train	Mysteries
+4Q299:f3aii_b:14-f5:4	test	Mysteries
+4Q299:f5:4-f6ii:6	train	Mysteries
+4Q299:f6ii:6-f8:1	train	Mysteries
+4Q299:f8:1-f9:5	train	Mysteries
+4Q299:f9:5-f13a_b:2	train	Mysteries
+4Q299:f13a_b:3-f21:2	test	Mysteries
+4Q299:f21:2-f27:2	train	Mysteries
+4Q299:f27:2-f32:4	test	Mysteries
+4Q299:f32:4-f40:1	train	Mysteries
+4Q299:f40:1-f48:1	train	Mysteries
+4Q299:f48:2-f54:2	test	Mysteries
+4Q299:f54:2-f59:2	test	Mysteries
+4Q299:f59:2-f64:2	train	Mysteries
+4Q299:f64:2-f68:4	test	Mysteries
+4Q299:f68:4-f74:4	train	Mysteries
+4Q299:f74:4-f79:9	train	Mysteries
+4Q299:f79:9-f86:2	train	Mysteries
+4Q299:f86:2-f96:2	train	Mysteries
+4Q299:f97:1-f106:3	train	Mysteries
+4Q381:f1:1-f1:10	test	Collections_of_psalms
+4Q381:f1:10-f10_11:3	test	Collections_of_psalms
+4Q381:f10_11:3-f15:2	train	Collections_of_psalms
+4Q381:f15:3-f16:2	train	Collections_of_psalms
+4Q381:f16:2-f20:4	test	Collections_of_psalms
+4Q381:f20:4-f24a+b:9	train	Collections_of_psalms
+4Q381:f24a+b:9-f29:5	train	Collections_of_psalms
+4Q381:f29:5-f31:6	train	Collections_of_psalms
+4Q381:f31:6-f33ab+35:3	train	Collections_of_psalms
+4Q381:f33ab+35:3-f33ab+35:10	train	Collections_of_psalms
+4Q381:f33ab+35:10-f42:1	train	Collections_of_psalms
+4Q381:f42:1-f45a+b:6	test	Collections_of_psalms
+4Q381:f45a+b:6-f46a+b:9	train	Collections_of_psalms
+4Q381:f46a+b:9-f50:2	train	Collections_of_psalms
+4Q381:f50:2-f57:3	train	Collections_of_psalms
+4Q381:f57:3-f69:3	train	Collections_of_psalms
+4Q381:f69:3-f72:2	train	Collections_of_psalms
+4Q381:f72:2-f76_77:10	train	Collections_of_psalms
+4Q381:f76_77:10-f78:6	test	Collections_of_psalms
+4Q381:f78:6-f85:2	train	Collections_of_psalms
+4Q381:f85:3-f95:2	test	Collections_of_psalms
+4Q381:f95:2-f106:1	test	Collections_of_psalms
+4Q381:f106:1-f110:1	train	Collections_of_psalms
+4Q387:f1:1-f2ii:3	train	Pseudo_Jeremiah
+4Q387:f2ii:3-f2iii:3	train	Pseudo_Jeremiah
+4Q387:f2iii:3-f4i:1	train	Pseudo_Jeremiah
+4Q387:f4i:1-fA:5	test	Pseudo_Jeremiah
+4Q391:f1:1-f8:2	test	Pseudo_Jeremiah
+4Q391:f8:2-f18:1	train	Pseudo_Jeremiah
+4Q391:f18:1-f27:1	test	Pseudo_Jeremiah
+4Q391:f27:1-f35:4	test	Pseudo_Jeremiah
+4Q391:f36:1-f44:1	train	Pseudo_Jeremiah
+4Q391:f44:1-f55:3	train	Pseudo_Jeremiah
+4Q391:f55:3-f61:1	train	Pseudo_Jeremiah
+4Q391:f61:1-f65:10	train	Pseudo_Jeremiah
+4Q391:f65:11-f78:1	train	Pseudo_Jeremiah
+4Q394:f1_2i:1-f3_7i:4	test	4QMMT
+4Q394:f3_7i:4-f3_7i:15	train	4QMMT
+4Q394:f3_7i:16-f3_7ii:17	test	4QMMT
+4Q394:f3_7ii:17-f8iii:18	train	4QMMT
+4Q394:f8iii:18-f8iv:11	train	4QMMT
+4Q394:f8iv:11-f10:1	train	4QMMT
+4Q397:f1_2:1-f5:2	test	4QMMT
+4Q397:f5:2-f6_13:5	test	4QMMT
+4Q397:f6_13:6-f6_13:12	train	4QMMT
+4Q397:f6_13:12-f14_21:7	train	4QMMT
+4Q397:f14_21:8-f22:1	train	4QMMT
+4Q397:f22:2-f23:3	train	4QMMT
+4Q400:f1i:1-f1i:13	test	Shir Shabat
+4Q400:f1i:13-f1ii:5	train	Shir Shabat
+4Q400:f1ii:6-f2:5	test	Shir Shabat
+4Q400:f2:5-f3ii+5:4	train	Shir Shabat
+4Q400:f3ii+5:4-f7:7	train	Shir Shabat
+4Q403:f1i:0-f1i:7	train	Shir Shabat
+4Q403:f1i:7-f1i:14	train	Shir Shabat
+4Q403:f1i:14-f1i:22	test	Shir Shabat
+4Q403:f1i:22-f1i:29	train	Shir Shabat
+4Q403:f1i:29-f1i:36	test	Shir Shabat
+4Q403:f1i:36-f1i:42	test	Shir Shabat
+4Q403:f1i:42-f1ii:6	test	Shir Shabat
+4Q403:f1ii:7-f1ii:18	test	Shir Shabat
+4Q403:f1ii:18-f1ii:27	train	Shir Shabat
+4Q403:f1ii:27-f1ii:41	train	Shir Shabat
+4Q403:f1ii:42-f3:3	train	Shir Shabat
+4Q405:f1:1-f3ii:9	train	Shir Shabat
+4Q405:f3ii:9-f4_5:5	train	Shir Shabat
+4Q405:f4_5:5-f7:5	train	Shir Shabat
+4Q405:f7:5-f11:2	train	Shir Shabat
+4Q405:f11:2-f13:3	train	Shir Shabat
+4Q405:f13:3-f14_15i:3	train	Shir Shabat
+4Q405:f14_15i:3-f15ii_16:4	train	Shir Shabat
+4Q405:f15ii_16:4-f18:5	train	Shir Shabat
+4Q405:f18:6-f19:8	train	Shir Shabat
+4Q405:f19:8-f20ii_22:7	train	Shir Shabat
+4Q405:f20ii_22:7-f20ii_22:13	train	Shir Shabat
+4Q405:f20ii_22:13-f23i:9	train	Shir Shabat
+4Q405:f23i:9-f23ii:6	train	Shir Shabat
+4Q405:f23ii:6-f24:2	train	Shir Shabat
+4Q405:f24:2-f31:4	train	Shir Shabat
+4Q405:f31:4-f40:2	train	Shir Shabat
+4Q405:f40:3-f48:2	test	Shir Shabat
+4Q405:f48:2-f61:1	train	Shir Shabat
+4Q405:f61:1-f72:2	test	Shir Shabat
+4Q405:f72:2-f82:3	test	Shir Shabat
+4Q405:f83:1-f94:2	test	Shir Shabat
+4Q415:f1i:1-f4:1	train	Instruction
+4Q415:f4:1-f9:7	train	Instruction
+4Q415:f9:7-f11:7	train	Instruction
+4Q415:f11:7-f16:2	test	Instruction
+4Q415:f16:2-f26:1	train	Instruction
+4Q415:f26:1-f32:4	test	Instruction
+4Q416:f1:1-f1:14	train	Instruction
+4Q416:f1:14-f2i:16	train	Instruction
+4Q416:f2i:16-f2ii:4	train	Instruction
+4Q416:f2ii:4-f2ii:11	train	Instruction
+4Q416:f2ii:11-f2ii:18	train	Instruction
+4Q416:f2ii:18-f2iii:7	train	Instruction
+4Q416:f2iii:7-f2iii:15	train	Instruction
+4Q416:f2iii:15-f2iv:3	train	Instruction
+4Q416:f2iv:3-f3:3	train	Instruction
+4Q416:f3:3-f7:2	train	Instruction
+4Q416:f7:3-f20:3	test	Instruction
+4Q416:f20:3-f22:1	train	Instruction
+4Q417:f1i:1-f1i:9	test	Instruction
+4Q417:f1i:9-f1i:17	train	Instruction
+4Q417:f1i:17-f1ii:4	test	Instruction
+4Q417:f1ii:5-f2i:4	train	Instruction
+4Q417:f2i:4-f2i:13	train	Instruction
+4Q417:f2i:13-f2i:20	test	Instruction
+4Q417:f2i:20-f2ii+23:3	train	Instruction
+4Q417:f2ii+23:3-f2ii+23:19	train	Instruction
+4Q417:f2ii+23:19-f4ii:6	test	Instruction
+4Q417:f4ii:6-f13:3	test	Instruction
+4Q417:f13:4-f19:5	train	Instruction
+4Q417:f19:5-f26:2	test	Instruction
+4Q417:f26:2-f29i:9	train	Instruction
+4Q418:f1:1-f2+2a_c:7	test	Instruction
+4Q418:f2+2a_c:7-f7b:3	test	Instruction
+4Q418:f7b:3-f8:1	train	Instruction
+4Q418:f8:1-f8:9	test	Instruction
+4Q418:f8:9-f8:16	train	Instruction
+4Q418:f8:16-f9+9a_c:9	test	Instruction
+4Q418:f9+9a_c:9-f9+9a_c:18	train	Instruction
+4Q418:f9+9a_c:18-f10a_b:9	train	Instruction
+4Q418:f10a_b:9-f18:2	train	Instruction
+4Q418:f18:2-f29:1	train	Instruction
+4Q418:f29:1-f36:3	train	Instruction
+4Q418:f36:4-f43_45i:3	train	Instruction
+4Q418:f43_45i:3-f43_45i:10	test	Instruction
+4Q418:f43_45i:10-f45ii:16	train	Instruction
+4Q418:f45ii:17-f55:3	test	Instruction
+4Q418:f55:3-f56:1	train	Instruction
+4Q418:f56:1-f64:4	test	Instruction
+4Q418:f65:1-f69ii:5	test	Instruction
+4Q418:f69ii:5-f69ii:12	train	Instruction
+4Q418:f69ii:13-f75:1	train	Instruction
+4Q418:f75:1-f81+81a:1	train	Instruction
+4Q418:f81+81a:1-f81+81a:9	test	Instruction
+4Q418:f81+81a:9-f81+81a:20	train	Instruction
+4Q418:f81+81a:20-f87:9	train	Instruction
+4Q418:f87:9-f90:1	train	Instruction
+4Q418:f90:1-f97:3	train	Instruction
+4Q418:f97:3-f103i:9	train	Instruction
+4Q418:f103i:9-f103ii:9	train	Instruction
+4Q418:f104:1-f111:1	test	Instruction
+4Q418:f111:1-f119:5	test	Instruction
+4Q418:f120:1-f123ii:4	train	Instruction
+4Q418:f123ii:4-f126ii:7	test	Instruction
+4Q418:f126ii:7-f127:2	test	Instruction
+4Q418:f127:2-f132:1	train	Instruction
+4Q418:f132:1-f138:2	train	Instruction
+4Q418:f138:2-f146:2	test	Instruction
+4Q418:f146:2-f149:1	train	Instruction
+4Q418:f149:1-f158:5	test	Instruction
+4Q418:f158:5-f164:1	train	Instruction
+4Q418:f164:1-f167a+b:8	train	Instruction
+4Q418:f167a+b:8-f172:8	train	Instruction
+4Q418:f172:8-f177:1	train	Instruction
+4Q418:f177:1-f180:2	train	Instruction
+4Q418:f180:3-f187:2	train	Instruction
+4Q418:f187:2-f194:2	train	Instruction
+4Q418:f195:1-f201:2	test	Instruction
+4Q418:f201:2-f210:2	train	Instruction
+4Q418:f210:2-f221:2	train	Instruction
+4Q418:f221:2-f227:1	train	Instruction
+4Q418:f227:2-f235:1	train	Instruction
+4Q418:f235:2-f243:3	train	Instruction
+4Q418:f243:3-f251:2	train	Instruction
+4Q418:f251:3-f267:1	train	Instruction
+4Q418:f267:1-f281:1	train	Instruction
+4Q418:f281:1-f297:1	train	Instruction
+4Q418:f297:1-f303:6	train	Instruction
+4Q423:f1_2i:1-f3:3	train	Instruction
+4Q423:f3:3-f5:1	test	Instruction
+4Q423:f5:1-f5:9	train	Instruction
+4Q423:f5:9-f8:1	test	Instruction
+4Q423:f8:1-f12:3	train	Instruction
+4Q423:f12:3-f22:1	train	Instruction
+4Q423:f22:1-f24:2	test	Instruction
+4Q427:f1:1-f1:7	train	4QH
+4Q427:f1:7-f5:2	train	4QH
+4Q427:f5:2-f7i:15	train	4QH
+4Q427:f7i:15-f7ii:4	train	4QH
+4Q427:f7ii:5-f7ii:13	train	4QH
+4Q427:f7ii:13-f8i:6	train	4QH
+4Q427:f8i:6-f8ii:8	test	4QH
+4Q427:f8ii:8-f8ii:18	test	4QH
+4Q427:f8ii:18-f10:4	train	4QH
+4Q427:f10:4-f14:2	train	4QH
+4Q427:f14:2-f22:2	test	4QH
+4Q428:f1:1-f3:8	train	4QH
+4Q428:f3:9-f5:7	train	4QH
+4Q428:f6:1-f10:1	train	4QH
+4Q428:f10:1-f11:1	test	4QH
+4Q428:f11:1-f13:5	train	4QH
+4Q428:f13:5-f15:4	train	4QH
+4Q428:f15:5-f19:3	train	4QH
+4Q428:f19:3-f22:2	test	4QH
+4Q428:f22:3-f32:1	train	4QH
+4Q428:f32:1-f49:2	test	4QH
+4Q428:f49:2-f69:4	train	4QH
+4Q428:f69:4-f69:4	test	4QH
+4Q429:f1i:1-f2:11	train	4QH
+4Q429:f2:11-f3:8	train	4QH
+4Q429:f3:8-f4i:7	test	4QH
+4Q429:f4i:7-f4ii:7	train	4QH
+4Q429:f4ii:7-f6:4	train	4QH
+4Q432:f1:1-f5:2	test	4QH
+4Q432:f5:2-f6:5	train	4QH
+4Q432:f6:5-f11:1	train	4QH
+4Q432:f11:1-f15:2	test	4QH
+4Q432:f15:2-f24:1	train	4QH
+4Q434:f1i:1-f1i:7	train	Barkhi_Nafshi
+4Q434:f1i:7-f1i:16	train	Barkhi_Nafshi
+4Q434:f1i:17-f2:7	test	Barkhi_Nafshi
+4Q434:f2:7-f6:3	train	Barkhi_Nafshi
+4Q434:f6:4-f15:3	test	Barkhi_Nafshi
+4Q491:f1_3:1-f1_3:7	train	4QM
+4Q491:f1_3:7-f1_3:11	train	4QM
+4Q491:f1_3:11-f1_3:15	test	4QM
+4Q491:f1_3:15-f4:2	train	4QM
+4Q491:f4:2-f8_10i:3	train	4QM
+4Q491:f8_10i:3-f8_10i:10	train	4QM
+4Q491:f8_10i:11-f10ii:10	train	4QM
+4Q491:f10ii:11-f11i:12	train	4QM
+4Q491:f11i:12-f11i:17	train	4QM
+4Q491:f11i:17-f11ii:3	test	4QM
+4Q491:f11ii:3-f11ii:11	train	4QM
+4Q491:f11ii:11-f11ii:19	test	4QM
+4Q491:f11ii:19-f13:2	train	4QM
+4Q491:f13:3-f14_15:3	train	4QM
+4Q491:f14_15:3-f16:4	test	4QM
+4Q491:f16:4-f20:2	test	4QM
+4Q491:f20:2-f25:3	train	4QM
+4Q491:f25:3-f37:2	train	4QM
+4Q496:f1_2:1-f5_6:1	test	4QM
+4Q496:f5_6:1-f10:2	test	4QM
+4Q496:f10:2-f15:2	train	4QM
+4Q496:f15:3-f21:3	train	4QM
+4Q496:f21:3-f30:1	train	4QM
+4Q496:f30:2-f39:1	train	4QM
+4Q496:f39:1-f55:1	train	4QM
+4Q496:f55:1-f64:1	test	4QM
+4Q496:f64:1-f82:1	train	4QM
+4Q496:f82:1-f98:3	test	4QM
+4Q496:f98:3-f122:1	train	4QM
+4Q511:f1:1-f2i:7	train	Songs_of_Maskil
+4Q511:f2i:7-f3:4	train	Songs_of_Maskil
+4Q511:f3:4-f8:6	test	Songs_of_Maskil
+4Q511:f8:7-f10:8	test	Songs_of_Maskil
+4Q511:f10:8-f12:2	train	Songs_of_Maskil
+4Q511:f12:3-f17:1	train	Songs_of_Maskil
+4Q511:f17:2-f18iii:10	train	Songs_of_Maskil
+4Q511:f19:1-f23:5	train	Songs_of_Maskil
+4Q511:f23:5-f28_29:3	test	Songs_of_Maskil
+4Q511:f28_29:4-f35:2	train	Songs_of_Maskil
+4Q511:f35:2-f37:6	train	Songs_of_Maskil
+4Q511:f37:6-f42:8	train	Songs_of_Maskil
+4Q511:f42:8-f48_49+51:2	train	Songs_of_Maskil
+4Q511:f48_49+51:2-f52+54_5+57_9:5	train	Songs_of_Maskil
+4Q511:f52+54_5+57_9:5-f63_64ii:3	train	Songs_of_Maskil
+4Q511:f63_64ii:3-f65:2	test	Songs_of_Maskil
+4Q511:f65:2-f73:4	test	Songs_of_Maskil
+4Q511:f74:1-f83:2	test	Songs_of_Maskil
+4Q511:f83:3-f94:2	train	Songs_of_Maskil
+4Q511:f94:2-f103:5	train	Songs_of_Maskil
+4Q511:f103:5-f115:2	train	Songs_of_Maskil
+4Q511:f115:3-f125:2	train	Songs_of_Maskil
+4Q511:f125:2-f132:2	train	Songs_of_Maskil
+4Q511:f132:3-f141:1	test	Songs_of_Maskil
+4Q511:f141:1-f149:2	train	Songs_of_Maskil
+4Q511:f149:2-f158:2	train	Songs_of_Maskil
+4Q511:f158:2-f171:2	test	Songs_of_Maskil
+4Q511:f171:2-f184:2	test	Songs_of_Maskil
+4Q511:f184:2-f197:2	train	Songs_of_Maskil
+4Q511:f197:2-f215:1	train	Songs_of_Maskil
+11Q12:f1:1-f1:10	test	Book_of_Jubilees
+11Q12:f1:11-f5:1	train	Book_of_Jubilees
+11Q12:f5:1-f7a:1	test	Book_of_Jubilees
+11Q12:f7a:1-f9:5	test	Book_of_Jubilees
+11Q12:f9:5-f13:3	train	Book_of_Jubilees
+11Q19:2:1-2:12	train	Temple Scroll
+11Q19:2:12-3:10	train	Temple Scroll
+11Q19:3:10-4:5	train	Temple Scroll
+11Q19:4:5-5:7	train	Temple Scroll
+11Q19:5:7-6:8	test	Temple Scroll
+11Q19:6:8-7:14	train	Temple Scroll
+11Q19:7:14-8:12	train	Temple Scroll
+11Q19:8:12-9:8	train	Temple Scroll
+11Q19:9:8-10:18	test	Temple Scroll
+11Q19:10:18-12:14	train	Temple Scroll
+11Q19:12:15-13:14	train	Temple Scroll
+11Q19:13:14-14:6	test	Temple Scroll
+11Q19:14:6-14:17	train	Temple Scroll
+11Q19:14:17-15:9	test	Temple Scroll
+11Q19:15:9-16:0	train	Temple Scroll
+11Q19:16:0-16:8	test	Temple Scroll
+11Q19:16:8-16:17	train	Temple Scroll
+11Q19:16:17-17:12	test	Temple Scroll
+11Q19:17:13-18:10	test	Temple Scroll
+11Q19:18:10-19:7	train	Temple Scroll
+11Q19:19:7-20:0	train	Temple Scroll
+11Q19:20:0-20:9	train	Temple Scroll
+11Q19:20:9-21:0	test	Temple Scroll
+11Q19:21:0-21:9	train	Temple Scroll
+11Q19:21:9-22:0	test	Temple Scroll
+11Q19:22:0-22:11	train	Temple Scroll
+11Q19:22:11-23:6	train	Temple Scroll
+11Q19:23:6-23:16	test	Temple Scroll
+11Q19:23:16-24:12	train	Temple Scroll
+11Q19:24:12-25:6	train	Temple Scroll
+11Q19:25:6-25:16	train	Temple Scroll
+11Q19:25:16-26:11	train	Temple Scroll
+11Q19:26:11-27:8	train	Temple Scroll
+11Q19:27:8-28:0	train	Temple Scroll
+11Q19:28:0-29:0	test	Temple Scroll
+11Q19:29:0-29:1	train	Temple Scroll
+11Q19:29:1-30:4	train	Temple Scroll
+11Q19:30:4-31:7	train	Temple Scroll
+11Q19:31:7-32:9	test	Temple Scroll
+11Q19:32:9-33:6	train	Temple Scroll
+11Q19:33:6-34:2	train	Temple Scroll
+11Q19:34:3-34:14	test	Temple Scroll
+11Q19:34:14-35:11	train	Temple Scroll
+11Q19:35:11-36:9	train	Temple Scroll
+11Q19:36:9-37:8	train	Temple Scroll
+11Q19:37:8-38:10	train	Temple Scroll
+11Q19:38:10-39:6	train	Temple Scroll
+11Q19:39:6-39:15	train	Temple Scroll
+11Q19:39:15-40:11	train	Temple Scroll
+11Q19:40:11-41:1	train	Temple Scroll
+11Q19:41:1-41:13	train	Temple Scroll
+11Q19:41:13-42:5	test	Temple Scroll
+11Q19:42:5-43:2	test	Temple Scroll
+11Q19:43:2-43:14	train	Temple Scroll
+11Q19:43:14-44:10	train	Temple Scroll
+11Q19:44:10-45:0	train	Temple Scroll
+11Q19:45:0-45:9	test	Temple Scroll
+11Q19:45:9-45:17	test	Temple Scroll
+11Q19:45:17-46:10	train	Temple Scroll
+11Q19:46:10-47:4	train	Temple Scroll
+11Q19:47:4-47:14	train	Temple Scroll
+11Q19:47:14-48:6	train	Temple Scroll
+11Q19:48:6-48:15	train	Temple Scroll
+11Q19:48:15-49:9	train	Temple Scroll
+11Q19:49:9-49:20	train	Temple Scroll
+11Q19:49:20-50:10	train	Temple Scroll
+11Q19:50:10-50:21	train	Temple Scroll
+11Q19:50:21-51:11	train	Temple Scroll
+11Q19:51:11-52:2	test	Temple Scroll
+11Q19:52:2-52:10	train	Temple Scroll
+11Q19:52:10-52:19	test	Temple Scroll
+11Q19:52:19-53:7	train	Temple Scroll
+11Q19:53:7-53:17	train	Temple Scroll
+11Q19:53:17-54:6	test	Temple Scroll
+11Q19:54:6-54:17	test	Temple Scroll
+11Q19:54:17-55:1	test	Temple Scroll
+11Q19:55:1-55:11	train	Temple Scroll
+11Q19:55:11-56:1	test	Temple Scroll
+11Q19:56:1-56:12	train	Temple Scroll
+11Q19:56:12-57:1	train	Temple Scroll
+11Q19:57:1-57:12	train	Temple Scroll
+11Q19:57:13-58:3	train	Temple Scroll
+11Q19:58:3-58:12	test	Temple Scroll
+11Q19:58:13-59:2	train	Temple Scroll
+11Q19:59:2-59:12	test	Temple Scroll
+11Q19:59:13-60:1	train	Temple Scroll
+11Q19:60:1-60:12	test	Temple Scroll
+11Q19:60:12-61:0	train	Temple Scroll
+11Q19:61:0-61:2	train	Temple Scroll
+11Q19:61:2-61:11	train	Temple Scroll
+11Q19:61:11-62:4	train	Temple Scroll
+11Q19:62:4-62:13	train	Temple Scroll
+11Q19:62:13-63:6	train	Temple Scroll
+11Q19:63:6-63:15	train	Temple Scroll
+11Q19:63:15-64:8	test	Temple Scroll
+11Q19:64:9-65:1	train	Temple Scroll
+11Q19:65:1-65:10	test	Temple Scroll
+11Q19:65:10-66:4	train	Temple Scroll
+11Q19:66:5-66:13	test	Temple Scroll
+11Q19:66:13-66:17	test	Temple Scroll
+11Q20:1:9-1:17	train	Temple Scroll
+11Q20:1:18-1:26	train	Temple Scroll
+11Q20:1:26-3:11	train	Temple Scroll
+11Q20:3:11-4:3	test	Temple Scroll
+11Q20:4:3-4:13	test	Temple Scroll
+11Q20:4:13-4:24	train	Temple Scroll
+11Q20:4:24-5:7	train	Temple Scroll
+11Q20:5:8-5:17	train	Temple Scroll
+11Q20:5:17-6:1	train	Temple Scroll
+11Q20:6:1-6:10	train	Temple Scroll
+11Q20:6:11-8:9	test	Temple Scroll
+11Q20:8:10-10:2	test	Temple Scroll
+11Q20:10:2-11:25	train	Temple Scroll
+11Q20:11:25-12:7	train	Temple Scroll
+11Q20:12:7-12:17	test	Temple Scroll
+11Q20:12:17-12:26	train	Temple Scroll
+11Q20:12:26-14:8	train	Temple Scroll
+11Q20:14:8-14:17	train	Temple Scroll
+11Q20:14:17-14:26	train	Temple Scroll
+11Q20:14:26-15:6	test	Temple Scroll
+11Q20:15:6-16:6	test	Temple Scroll
+11Q20:16:6-f42:1	train	Temple Scroll
