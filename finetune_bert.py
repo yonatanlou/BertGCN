@@ -13,16 +13,17 @@ from sklearn.metrics import accuracy_score
 import argparse, shutil, logging
 from torch.optim import lr_scheduler
 from model import BertClassifier
-
+from datetime import datetime
 parser = argparse.ArgumentParser()
 parser.add_argument('--max_length', type=int, default=128, help='the input length for bert')
 parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--nb_epochs', type=int, default=60)
 parser.add_argument('--bert_lr', type=float, default=1e-4)
-parser.add_argument('--dataset', default='20ng', choices=['20ng', 'R8', 'R52', 'ohsumed', 'mr'])
-parser.add_argument('--bert_init', type=str, default='roberta-base',
-                    choices=['roberta-base', 'roberta-large', 'bert-base-uncased', 'bert-large-uncased'])
+parser.add_argument('--dataset', default='DSS_composition_classification', choices=['20ng', 'R8', 'R52', 'ohsumed', 'mr', 'DSS_composition_classification'])
+parser.add_argument('--bert_init', type=str, default='dicta-il/BEREL',
+                    choices=['roberta-base', 'roberta-large', 'bert-base-uncased', 'bert-large-uncased', 'dicta-il/BEREL'])
 parser.add_argument('--checkpoint_dir', default=None, help='checkpoint directory, [bert_init]_[dataset] if not specified')
+parser.add_argument('--compute', default='cpu', help='cpu or gpu')
 
 args = parser.parse_args()
 
@@ -37,6 +38,7 @@ if checkpoint_dir is None:
     ckpt_dir = './checkpoint/{}_{}'.format(bert_init, dataset)
 else:
     ckpt_dir = checkpoint_dir
+compute = args.compute
 
 os.makedirs(ckpt_dir, exist_ok=True)
 shutil.copy(os.path.basename(__file__), ckpt_dir)
@@ -54,6 +56,13 @@ logger.setLevel(logging.INFO)
 
 cpu = th.device('cpu')
 gpu = th.device('cuda:0')
+if compute == "cpu":
+    compute = cpu
+elif compute == "gpu":
+    compute = gpu
+else:
+    raise ValueError("set compute to cpu or gpu only")
+
 
 logger.info('arguments:')
 logger.info(str(args))
@@ -115,10 +124,11 @@ scheduler = lr_scheduler.MultiStepLR(optimizer, milestones=[30], gamma=0.1)
 
 def train_step(engine, batch):
     global model, optimizer
+    print(f"{datetime.now()} - train step")
     model.train()
-    model = model.to(gpu)
+    model = model.to(compute)
     optimizer.zero_grad()
-    (input_ids, attention_mask, label) = [x.to(gpu) for x in batch]
+    (input_ids, attention_mask, label) = [x.to(compute) for x in batch]
     optimizer.zero_grad()
     y_pred = model(input_ids, attention_mask)
     y_true = label.type(th.long)
@@ -126,10 +136,12 @@ def train_step(engine, batch):
     loss.backward()
     optimizer.step()
     train_loss = loss.item()
+    print(f"{datetime.now()} - {train_loss=}")
     with th.no_grad():
         y_true = y_true.detach().cpu()
         y_pred = y_pred.argmax(axis=1).detach().cpu()
         train_acc = accuracy_score(y_true, y_pred)
+        print(f"{datetime.now()} - {train_acc=}")
     return train_loss, train_acc
 
 
@@ -138,10 +150,11 @@ trainer = Engine(train_step)
 
 def test_step(engine, batch):
     global model
+    print(f"{datetime.now()} - test step")
     with th.no_grad():
         model.eval()
-        model = model.to(gpu)
-        (input_ids, attention_mask, label) = [x.to(gpu) for x in batch]
+        model = model.to(compute)
+        (input_ids, attention_mask, label) = [x.to(compute) for x in batch]
         optimizer.zero_grad()
         y_pred = model(input_ids, attention_mask)
         y_true = label

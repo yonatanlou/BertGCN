@@ -22,10 +22,10 @@ parser.add_argument('--max_length', type=int, default=128, help='the input lengt
 parser.add_argument('--batch_size', type=int, default=64)
 parser.add_argument('-m', '--m', type=float, default=0.7, help='the factor balancing BERT and GCN prediction')
 parser.add_argument('--nb_epochs', type=int, default=50)
-parser.add_argument('--bert_init', type=str, default='roberta-base',
-                    choices=['roberta-base', 'roberta-large', 'bert-base-uncased', 'bert-large-uncased'])
+parser.add_argument('--bert_init', type=str, default='dicta-il/BEREL',
+                    choices=['roberta-base', 'roberta-large', 'bert-base-uncased', 'bert-large-uncased','dicta-il/BEREL'])
 parser.add_argument('--pretrained_bert_ckpt', default=None)
-parser.add_argument('--dataset', default='20ng', choices=['20ng', 'R8', 'R52', 'ohsumed', 'mr'])
+parser.add_argument('--dataset', default='DSS_composition_classification', choices=['20ng', 'R8', 'R52', 'ohsumed', 'mr','DSS_composition_classification'])
 parser.add_argument('--checkpoint_dir', default=None, help='checkpoint directory, [bert_init]_[gcn_model]_[dataset] if not specified')
 parser.add_argument('--gcn_model', type=str, default='gcn', choices=['gcn', 'gat'])
 parser.add_argument('--gcn_layers', type=int, default=2)
@@ -34,7 +34,7 @@ parser.add_argument('--heads', type=int, default=8, help='the number of attentio
 parser.add_argument('--dropout', type=float, default=0.5)
 parser.add_argument('--gcn_lr', type=float, default=1e-3)
 parser.add_argument('--bert_lr', type=float, default=1e-5)
-
+parser.add_argument('--compute', default='cpu', help='cpu or gpu')
 args = parser.parse_args()
 max_length = args.max_length
 batch_size = args.batch_size
@@ -51,6 +51,7 @@ heads = args.heads
 dropout = args.dropout
 gcn_lr = args.gcn_lr
 bert_lr = args.bert_lr
+compute = args.compute
 
 if checkpoint_dir is None:
     ckpt_dir = './checkpoint/{}_{}_{}'.format(bert_init, gcn_model, dataset)
@@ -72,6 +73,12 @@ logger.setLevel(logging.INFO)
 
 cpu = th.device('cpu')
 gpu = th.device('cuda:0')
+if compute == "cpu":
+    compute = cpu
+elif compute == "gpu":
+    compute = gpu
+else:
+    raise ValueError("set compute to cpu or gpu only")
 
 logger.info('arguments:')
 logger.info(str(args))
@@ -103,7 +110,7 @@ else:
 
 
 if pretrained_bert_ckpt is not None:
-    ckpt = th.load(pretrained_bert_ckpt, map_location=gpu)
+    ckpt = th.load(pretrained_bert_ckpt, map_location=compute)
     model.bert_model.load_state_dict(ckpt['bert_model'])
     model.classifier.load_state_dict(ckpt['classifier'])
 
@@ -144,6 +151,7 @@ g.ndata['cls_feats'] = th.zeros((nb_node, model.feat_dim))
 
 logger.info('graph information:')
 logger.info(str(g))
+print(f"{datetime.now()} - {str(g)=}")
 
 # create index loader
 train_idx = Data.TensorDataset(th.arange(0, nb_train, dtype=th.long))
@@ -159,17 +167,18 @@ idx_loader = Data.DataLoader(doc_idx, batch_size=batch_size, shuffle=True)
 # Training
 def update_feature():
     global model, g, doc_mask
+    print(f"{datetime.now()} - started update_feature()")
     # no gradient needed, uses a large batchsize to speed up the process
     dataloader = Data.DataLoader(
         Data.TensorDataset(g.ndata['input_ids'][doc_mask], g.ndata['attention_mask'][doc_mask]),
         batch_size=1024
     )
     with th.no_grad():
-        model = model.to(gpu)
+        model = model.to(compute)
         model.eval()
         cls_list = []
         for i, batch in enumerate(dataloader):
-            input_ids, attention_mask = [x.to(gpu) for x in batch]
+            input_ids, attention_mask = [x.to(compute) for x in batch]
             output = model.bert_model(input_ids=input_ids, attention_mask=attention_mask)[0][:, 0]
             cls_list.append(output.cpu())
         cls_feat = th.cat(cls_list, axis=0)
@@ -189,11 +198,12 @@ scheduler = lr_scheduler.MultiStepLR(optimizer, milestones=[30], gamma=0.1)
 
 def train_step(engine, batch):
     global model, g, optimizer
+    print(f"{datetime.now()} - train_step()")
     model.train()
-    model = model.to(gpu)
-    g = g.to(gpu)
+    model = model.to(compute)
+    g = g.to(compute)
     optimizer.zero_grad()
-    (idx, ) = [x.to(gpu) for x in batch]
+    (idx, ) = [x.to(compute) for x in batch]
     optimizer.zero_grad()
     train_mask = g.ndata['train'][idx].type(th.BoolTensor)
     y_pred = model(g, idx)[train_mask]
@@ -203,13 +213,16 @@ def train_step(engine, batch):
     optimizer.step()
     g.ndata['cls_feats'].detach_()
     train_loss = loss.item()
+    print(f"{datetime.now()} - {train_loss=}")
     with th.no_grad():
         if train_mask.sum() > 0:
             y_true = y_true.detach().cpu()
             y_pred = y_pred.argmax(axis=1).detach().cpu()
             train_acc = accuracy_score(y_true, y_pred)
+            print(f"{datetime.now()} - {train_acc=}")
         else:
             train_acc = 1
+            print(f"{datetime.now()} - {train_acc=}")
     return train_loss, train_acc
 
 
@@ -218,6 +231,7 @@ trainer = Engine(train_step)
 
 @trainer.on(Events.EPOCH_COMPLETED)
 def reset_graph(trainer):
+    print(f"{datetime.now()} - reset_graph")
     scheduler.step()
     update_feature()
     th.cuda.empty_cache()
@@ -226,10 +240,11 @@ def reset_graph(trainer):
 def test_step(engine, batch):
     global model, g
     with th.no_grad():
+        print(f"{datetime.now()} - test_step()")
         model.eval()
-        model = model.to(gpu)
-        g = g.to(gpu)
-        (idx, ) = [x.to(gpu) for x in batch]
+        model = model.to(compute)
+        g = g.to(compute)
+        (idx, ) = [x.to(compute) for x in batch]
         y_pred = model(g, idx)
         y_true = g.ndata['label'][idx]
         return y_pred, y_true
@@ -246,12 +261,17 @@ for n, f in metrics.items():
 
 @trainer.on(Events.EPOCH_COMPLETED)
 def log_training_results(trainer):
+    print(f"{datetime.now()} - run on idx_loader_Train")
     evaluator.run(idx_loader_train)
     metrics = evaluator.state.metrics
     train_acc, train_nll = metrics["acc"], metrics["nll"]
+    # print(f"{datetime.now()} - {train_acc=}, {train_nll=}")
+    print(f"{datetime.now()} - run on idx_loader_val")
     evaluator.run(idx_loader_val)
     metrics = evaluator.state.metrics
     val_acc, val_nll = metrics["acc"], metrics["nll"]
+    # print(f"{datetime.now()} - {val_acc=}, {val_nll=}")
+    print(f"{datetime.now()} - run on idx_loader_test")
     evaluator.run(idx_loader_test)
     metrics = evaluator.state.metrics
     test_acc, test_nll = metrics["acc"], metrics["nll"]
